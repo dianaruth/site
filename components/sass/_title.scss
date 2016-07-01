@@ -1,15 +1,68 @@
 #title {
-    height: 800px;
+    height: 900px;
     background-color: grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    // background: url("../assets/background.jpg") no-repeat center center fixed;
+    // -webkit-background-size: cover;
+    // -moz-background-size: cover;
+    // -o-background-size: cover;
+    // background-size: cover;
 }
 
 .main-header {
     font-family: $title-header;
     font-size: 200px;
     font-weight: 900;
+    margin: 0px;
+    opacity: 0;
+    animation-name: header-fade-in;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
 }
 
 .title-sub {
     font-family: $title-sub;
-    font-weight: 900;
+    font-size: 50px;
+    margin: 0px;
+    opacity: 0;
+    margin-bottom: 20px;
+    animation-name: header-fade-in;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+}
+
+#title-one {
+    animation-delay: 2s;
+}
+
+#title-two {
+    animation-delay: 2.5s;
+}
+
+#title-three {
+    animation-delay: 3s;
+}
+
+@keyframes header-fade-in {
+    from {transform: translateY(-100px); opacity: 0;}
+    to {opacity: 1; transform: translateY(0px);}
+}
+
+@media (max-width: 900px) {
+    #title {
+        height: 600px;
+    }
+    .main-header {
+        font-size: 150px;
+        text-align: center;
+    }
+    .title-sub {
+        font-size: 35px;
+    }
 }

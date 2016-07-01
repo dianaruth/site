@@ -1,0 +1,26 @@
+footer {
+    text-align: center;
+    background-color: $dark-grey;
+    i {
+        margin: 10px 10px 20px 10px;
+        color: $pale-blue;
+        &:hover {
+            color: $off-white;
+            cursor: pointer;
+        }
+    }
+    h2 {
+        margin: 0px;
+        padding-top: 20px;
+        font-family: $nav-footer-font;
+        font-size: 25px;
+        font-weight: bold;
+        color: $pale-blue;
+    }
+}
+
+.footer-flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
