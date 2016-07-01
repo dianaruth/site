@@ -1,0 +1,17 @@
+#title {
+  height: 800px;
+  background-color: grey;
+}
+
+.main-header {
+  font-family: swingdancer, Georgia, serif;
+  font-size: 200px;
+  font-weight: 900;
+}
+
+.title-sub {
+  font-family: mr-eaves-xl-modern, Helvetica, sans-serif;
+  font-weight: 900;
+}
+
+/*# sourceMappingURL=style.css.map */
