@@ -1,6 +1,7 @@
 $(window).load(function() {
     $(".loader").fadeOut("slow");
 });
+
 $("#navbar-about").click(function() {
     $('html, body').animate({
         scrollTop: $("#about").offset().top - 50
