@@ -18,6 +18,9 @@
     font-weight: 900;
     margin: 0px;
     opacity: 0;
+}
+
+.main-header-animated {
     animation-name: header-fade-in;
     animation-duration: 1s;
     animation-delay: 1s;
@@ -31,21 +34,24 @@
     margin: 0px;
     opacity: 0;
     margin-bottom: 20px;
+}
+
+.title-sub-animated {
     animation-name: header-fade-in;
     animation-duration: 1s;
     animation-fill-mode: forwards;
     animation-timing-function: ease;
 }
 
-#title-one {
+.title-one-animated {
     animation-delay: 2s;
 }
 
-#title-two {
+.title-two-animated {
     animation-delay: 2.5s;
 }
 
-#title-three {
+.title-three-animated {
     animation-delay: 3s;
 }
 
