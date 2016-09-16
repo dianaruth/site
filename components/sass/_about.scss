@@ -1,37 +1,87 @@
 #about {
-    background-color: cornflowerblue;
-    .row {
-        padding-top: 80px;
-        padding-bottom: 80px;
-        padding-right: 50px;
-        margin-top: 30px;
-        margin-bottom: 30px;
-        background-color: rgba(255, 255, 255, 0.2);
-        p {
-            font-family: $paragraph-font;
-            font-size: 20px;
-            font-weight: bold;
+    background: url("../images/stars.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+
+    .blurb {
+        background-color: $pale-blue;
+        border-radius: 50%;
+    }
+
+    .blurb-one {
+        height: 500px;
+        width: 500px;
+        margin-top: 40px;
+        margin-right: 30px;
+        float: right;
+    }
+
+    .blurb-two {
+        height: 300px;
+        width: 300px;
+        margin-top: -150px;
+        margin-left: 100px;
+        float: left;
+    }
+
+    .blurb-three {
+        height: 400px;
+        width: 400px;
+        margin-right: 250px;
+        margin-bottom: 40px;
+        margin-top: -50px;
+        float: right;
+    }
+
+    .small-info, .small-pic {
+        display: none;
+    }
+}
+
+@media (max-width: 1000px) {
+    #about {
+        .blurb-one {
+            height: 400px;
+            width: 400px;
+            margin-right: 20px;
+        }
+
+        .blurb-two {
+            height: 200px;
+            width: 200px;
+            margin-left: 50px;
+        }
+
+        .blurb-three {
+            height: 300px;
+            width: 300px;
         }
     }
 }
 
-.section-header {
-    margin: 0px;
-    text-align: center;
-    padding-top: 50px;
-    font-family: $primary-header;
-    font-size: 60px;
-}
-
-.animating {
-    animation-name: animate;
-    animation-duration: 3s;
-    animation-fill-mode: both;
-    animation-iteration-count: infinite;
-}
-
-@keyframes animate {
-    0% {background-color: cornflowerblue;}
-    50% {background-color: red;}
-    100% {background-color: cornflowerblue;}
+@media (max-width: 750px) {
+    #about {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        .blurb-one, .blurb-two, .blurb-three {
+            display: none;
+        }
+        .small-info {
+            display: block;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            height: 500px;
+            width: 500px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+        .small-pic {
+            display: block;
+            margin-bottom: 50px;
+            border-radius: 50%;
+        }
+    }
 }

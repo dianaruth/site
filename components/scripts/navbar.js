@@ -16,8 +16,4 @@ $("#navbar-contact").click(function() {
     }, 1000);
 });
 
-$('.navbar').on('activate.bs.scrollspy', function () {
-    if ($("#navbar-about").hasClass("active")) {
-        $("#about").addClass("animating");
-    }
-})
+//$("#about").inviewport({threshold: 50, className: "animating"});

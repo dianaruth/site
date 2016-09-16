@@ -4,21 +4,21 @@
     border: none;
     border-radius: 0px;
     .navbar-nav>li>a {
-        font-family: $nav-footer-font;
+        font-family: $block-caps;
         font-size: 20px;
         font-weight: bold;
         color: $pale-blue;
         &:hover {
             background-color: rgba(0, 0, 0, 0);
-            color: $off-white;
+            color: white;
         }
     }
     .navbar-nav>.active>a {
         background-color: rgba(0, 0, 0, 0);
-        color: white;
+        color: $almost-white;
         &:hover {
             background-color: rgba(0, 0, 0, 0);
-            color: $off-white;
+            color: white;
         }
     }
     .navbar-brand {

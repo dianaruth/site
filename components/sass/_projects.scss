@@ -1,4 +1,22 @@
 #projects {
     height: 1000px;
-    background-color: $off-white;
+    background-color: $dark-grey;
+    #project-title {
+        font-family: $primary-header;
+        text-align: center;
+        color: $pale-blue;
+        font-size: 70px;
+        margin: 0px;
+        padding: 30px;
+    }
+    .thumb {
+        padding: 0px;
+        margin: 0px;
+    }
+}
+
+@media (max-width: 500px) {
+    #projects {
+        display: none;
+    }
 }
