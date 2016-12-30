@@ -9,6 +9,13 @@ body {
     flex-direction: row;
 }
 
+.flex-container-col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
 .loader {
 	position: fixed;
 	left: 0px;
@@ -19,11 +26,34 @@ body {
 	background: $dark-grey;
 }
 
-#loading {
-    font-family: $loading-font;
-    font-weight: bolder;
-    font-size: 80px;
-    color: $pale-blue;
+.loader-spin {
+    -webkit-animation: spin 4s linear infinite;
+    -moz-animation: spin 4s linear infinite;
+    animation: spin 4s linear infinite;
+}
+
+.section-header {
+    font-family: $primary-header;
+    font-size: 60px;
+}
+
+@-moz-keyframes spin {
+    100% {
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform:rotate(360deg);
+    }
 }
 
 @media (max-width: 800px) {

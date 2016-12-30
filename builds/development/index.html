@@ -8,9 +8,9 @@
         <link rel="stylesheet" type="text/css" href="dev/font-awesome/css/font-awesome.min.css" />
         <link rel="stylesheet" type="text/css" href="css/style.css" />
     </head>
-    <body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <body data-spy="scroll" data-target=".navbar" data-offset="50" ng-app="projects">
         <div class="loader flex-container">
-            <h1 id="loading">Loading...</h1>
+            <img class="loader-spin" src="images/loader.svg" alt="Loading...">
         </div>
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container-fluid">
@@ -41,63 +41,93 @@
             <h2 class="title-sub">Texas Longhorn</h2>
         </section>
         <section id="about">
+            <div class="container flex-container-col">
+                <h1 class="section-header">About</h1>
+                <div class="row about-container">
+                    <img src="../images/horse.jpg" alt="Deacon and I" id="about-img-one" class="about-img">
+                    <p class="about-text">
+                        Hello! My name is Diana Ruth and I'm a fifth year student at The University of Texas at Austin. I am a double major in Electrical Engineering and Computer Science graduating in May 2017. I'm a member of Theta Tau, a national co-ed professional engineering fraternity, and I'm the president of the Texas Equestrian Team. In my free time, you can find me running, biking, cooking, or spending time at the barn.
+                    </p>
+                    <img src="../images/mountain.jpg" alt="Guadalupe Peak" id="about-img-two" class="about-img">
+                    <p class="about-text">
+                        Since I'm studying both electrical engineering and computer science, I've been exposed to a large variety of concepts that has provided me with a well-rounded understanding of software engineering. I've taken classes on circuits, logic design, operating systems and more, but my true passion lies in web design and development. I love learning new languages and frameworks in my spare time to further develop my software development skills, and I'm hoping to pursue a career that allows me use the newest technologies to solve all types of problems.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section id="projects" ng-controller="ModalsController">
+            <div class="row">
+                <h1 class="section-header">Projects</h1>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-xs-6 thumb" ng-repeat="project in projects" ng-click="openModal(project.id);">
+                    <img class="img-responsive" src="images/thumbs/{{project.thumb}}" alt="">
+                </div>
+            </div>
+
+            <div class="modal modal-fullscreen fade" id="{{project.id}}" tabindex="-1" role="dialog" aria-hidden="true" ng-repeat="project in projects">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close close-btn" data-dismiss="modal"><i class="fa fa-times" aria-hidden="true"></i></button>
+                            <h1 class="modal-title">{{project.name}}</h1>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6">
+                                    <h5>Platform</h5>
+                                    <h6>{{project.platform}}</h6>
+                                    <h5>Completion Date</h5>
+                                    <h6>{{project.completion}}</h6>
+                                    <h5>Number of Contributors</h5>
+                                    <h6>{{project.num_contributors}}</h6>
+                                    <h5>Role</h5>
+                                    <h6>{{project.role}}</h6>
+                                    <h5>Description</h5>
+                                    <h6>{{project.description}}</h6>
+                                    <h5>Source Code</h5>
+                                    <a href="{{project.source_link}}" target="_blank">{{project.source_link}}</a>
+                                    <br>
+                                    <br>
+                                    <h5><a href="{{project.link}}" target="_blank" ng-if="project.link">Click to View Project</a></h5>
+                                    <br>
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <img src="images/{{photo}}" ng-repeat="photo in project.images">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
             <div class="container">
                 <div class="row">
-                    <div class="blurb blurb-one">
-
+                    <div class="col-lg-12">
+                        <div id="contact-form">
+                            <h1 class="section-header">Give Me a Shout!</h1>
+                            <form method="POST" action="http://formspree.io/hello@dianaruth.me">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="name" placeholder="Your name">
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" name="email" placeholder="Your email">
+                                </div>
+                                <div class="form-group">
+                                    <textarea name="message" class="form-control" placeholder="Your message"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-default">Send</button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="blurb blurb-two">
-
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="blurb blurb-three">
-
-                    </div>
-                </div>
-                <div class="row small-info">
-
-                </div>
-                <img class="small-pic" src="images/mountains.svg" />
-            </div>
-            <!-- <div class="container">
-                <h1 class="section-header">//About//</h1>
-                <div class="row flex-container">
-                    <div class="col-lg-6 col-md-6 flex-container">
-                        <img src="nothing" alt="pic">
-                    </div>
-                    <div class="col-lg-6 col-md-6">
-                        <p>Hello! My name is Diana Ruth and I'm a fourth year student at The University of Texas at Austin. I am a double major in Electrical Engineering and Computer Science set to graduate in May of 2017 and I'm absolutely loving it. I'm a member of Theta Tau, a national co-ed professional engineering fraternity, and I'm the president of the Texas Equestrian Team. In my free time, you can find me running, biking, cooking, or spending time at the barn.</p>
-                        <p>Since I'm studying both electrical engineering and computer science, I've been exposed to a large variety of concepts that has provided me with a well-rounded understanding of software engineering. I've taken classes on circuits, logic design, operating systems and more, but nothing gets me as excited as web development does. I have an intense passion for designing and implementing web sites and I would love to work with web and mobile development when I graduate. I love learning new languages and frameworks in my spare time to further develop my software development skills. Click <a href="resources/resume.pdf" target="_blank">here</a> to view my resume.</p>
-                    </div>
-                </div>
-            </div> -->
-        </section>
-        <section id="projects">
-            <h1 id="project-title">Projects</h1>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <img class="img-responsive" src="http://placehold.it/500x500" alt="">
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <img class="img-responsive" src="http://placehold.it/500x500" alt="">
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <img class="img-responsive" src="http://placehold.it/500x500" alt="">
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <img class="img-responsive" src="http://placehold.it/500x500" alt="">
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <img class="img-responsive" src="http://placehold.it/500x500" alt="">
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <img class="img-responsive" src="http://placehold.it/500x500" alt="">
             </div>
         </section>
         <footer>
-            <h2>&copy; 2016 Diana Ruth</h2>
+            <h2>&copy; 2016-2017 Diana Ruth</h2>
             <div class="footer-flex-container">
                 <a href="https://www.facebook.com/diana.ruth.16"><i class="fa fa-facebook-official fa-3x" aria-hidden="true"></i></a>
                 <a href="https://github.com/dianaruth"><i class="fa fa-github fa-3x" aria-hidden="true"></i></a>
@@ -108,6 +138,7 @@
         </footer>
         <script type="text/javascript" src="dev/jquery/jquery-2.2.4.js"></script>
         <script type="text/javascript" src="dev/bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="dev/angular.min.js"></script>
         <script type="text/javascript" src="js/script.js"></script>
     </body>
 </html>

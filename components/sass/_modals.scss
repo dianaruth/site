@@ -1,0 +1,121 @@
+.modal-fullscreen {
+    background: transparent;
+}
+
+.modal-open .modal {
+    background-color: rgba(57, 62, 70, 0.9);
+}
+
+.modal-body img {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.modal-fullscreen .modal-content {
+    background: transparent;
+    border: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.modal-backdrop.modal-backdrop-fullscreen {
+    background: #393E46;
+}
+
+.modal-backdrop.modal-backdrop-fullscreen.in {
+    opacity: .97;
+    filter: alpha(opacity=97);
+}
+
+.modal-fullscreen .modal-dialog {
+    margin: 0;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+}
+
+.close-btn {
+    -webkit-animation: in 1s;
+    -moz-animation: in 1s;
+    animation: in 1s;
+    color: $pale-blue;
+    opacity: 0.8;
+    :hover, :after, :before {
+        color: $pale-blue;
+    }
+}
+
+.close-btn:hover {
+    -webkit-animation: out 1s;
+    -moz-animation: out 1s;
+    animation: out 1s;
+}
+
+.modal-header {
+    border: none;
+    font-family: $paragraph-font;
+    color: $pale-blue;
+    h1 {
+        font-size: 50px;
+        font-weight: 900;
+    }
+}
+
+.modal-body {
+    font-family: $paragraph-font;
+    h5 {
+        color: $pale-blue;
+        font-size: 30px;
+    }
+    h6 {
+        color: $off-white;
+        font-size: 20px;
+        margin-bottom: 25px;
+    }
+}
+
+@keyframes in {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
+
+@-moz-keyframes in {
+    from {-moz-transform:rotate(0deg);}
+    to {-moz-transform:rotate(360deg);}
+}
+
+@-webkit-keyframes in {
+    from {-webkit-transform:rotate(0deg);}
+    to {-webkit-transform:rotate(360deg);}
+}
+
+@keyframes out {
+    from {transform:rotate(360deg);}
+    to {transform:rotate(0deg);}
+}
+
+@-moz-keyframes out {
+    from {-moz-transform:rotate(360deg);}
+    to {-moz-transform:rotate(0deg);}
+}
+
+@-webkit-keyframes out {
+    from {-webkit-transform:rotate(360deg);}
+    to {-webkit-transform:rotate(0deg);}
+}
+
+@media (min-width: 768px) {
+    .modal-fullscreen .modal-dialog {
+        width: 750px;
+    }
+}
+@media (min-width: 992px) {
+    .modal-fullscreen .modal-dialog {
+        width: 970px;
+    }
+}
+@media (min-width: 1200px) {
+    .modal-fullscreen .modal-dialog {
+        width: 1170px;
+    }
+}

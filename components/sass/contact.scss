@@ -1,0 +1,59 @@
+#contact {
+    background: url("../images/geometric.png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    background-color: $pale-blue;
+
+    h1 {
+        font-weight: 800;
+        color: $dark-grey;
+    }
+
+    #contact-form {
+        margin-top: 150px;
+        margin-bottom: 150px;
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.7);
+        padding: 20px;
+        border-radius: 20px;
+    }
+
+    .form-control {
+        background-color: rgba(0, 0, 0, 0.7);
+        color: $pale-blue;
+        border: 2px solid $pale-blue;
+        border-radius: 6px;
+        font-family: $block-caps;
+        height: 50px;
+        font-size: 18px;
+    }
+
+    button {
+        border-radius: 0px;
+        padding: 10px 15px 10px 15px;
+        font-family: $block-caps;
+        font-size: 18px;
+        color: $pale-blue;
+        background-color: $dark-grey;
+        border: 3px solid $pale-blue;
+    }
+}
+
+@media (max-width: 600px) {
+    #contact {
+        #contact-form {
+            margin-top: 100px;
+            margin-bottom: 100px;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    #contact {
+        #contact-form {
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+    }
+}

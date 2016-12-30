@@ -1,87 +1,62 @@
 #about {
-    background: url("../images/stars.jpg") no-repeat center center fixed;
+    background: url("../images/ribbon.png") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
+    background-color: #e6f9ff;
+}
 
-    .blurb {
-        background-color: $pale-blue;
-        border-radius: 50%;
+#about-title {
+    text-align: center;
+    font-size: 100px;
+    margin-bottom: 30px;
+}
+
+.about-text {
+    font-family: $paragraph-font;
+    color: $dark-grey;
+    font-size: 25px;
+}
+
+.about-img {
+    width: 300px;
+    border-radius: 50%;
+    margin: 20px;
+}
+
+#about-img-one {
+    float: left;
+}
+
+#about-img-two {
+    float: right;
+}
+
+@media (max-width: 992px) {
+    .about-text {
+        font-size: 20px;
     }
-
-    .blurb-one {
-        height: 500px;
-        width: 500px;
-        margin-top: 40px;
-        margin-right: 30px;
-        float: right;
+    .about-img {
+        width: 200px;
     }
+}
 
-    .blurb-two {
-        height: 300px;
-        width: 300px;
-        margin-top: -150px;
-        margin-left: 100px;
-        float: left;
+@media (max-width: 780px) {
+    .about-container {
+        margin-left: 20px;
+        margin-right: 20px;
     }
+}
 
-    .blurb-three {
-        height: 400px;
-        width: 400px;
-        margin-right: 250px;
-        margin-bottom: 40px;
-        margin-top: -50px;
-        float: right;
+@media (max-width: 600px) {
+    .about-text {
+        font-size: 20px;
     }
-
-    .small-info, .small-pic {
+    .about-img {
         display: none;
     }
-}
-
-@media (max-width: 1000px) {
-    #about {
-        .blurb-one {
-            height: 400px;
-            width: 400px;
-            margin-right: 20px;
-        }
-
-        .blurb-two {
-            height: 200px;
-            width: 200px;
-            margin-left: 50px;
-        }
-
-        .blurb-three {
-            height: 300px;
-            width: 300px;
-        }
-    }
-}
-
-@media (max-width: 750px) {
-    #about {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        .blurb-one, .blurb-two, .blurb-three {
-            display: none;
-        }
-        .small-info {
-            display: block;
-            margin-top: 50px;
-            margin-bottom: 50px;
-            height: 500px;
-            width: 500px;
-            text-align: center;
-            background-color: rgba(0, 0, 0, 0.6);
-        }
-        .small-pic {
-            display: block;
-            margin-bottom: 50px;
-            border-radius: 50%;
-        }
+    .about-container {
+        margin-left: 10px;
+        margin-right: 10px;
     }
 }

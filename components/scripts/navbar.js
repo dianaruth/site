@@ -15,5 +15,3 @@ $("#navbar-contact").click(function() {
         scrollTop: $("#contact").offset().top - 50
     }, 1000);
 });
-
-//$("#about").inviewport({threshold: 50, className: "animating"});
