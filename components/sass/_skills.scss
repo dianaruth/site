@@ -1,0 +1,27 @@
+#skills {
+    background-color: $pale-blue;
+    padding-bottom: 40px;
+
+    hr {
+        border-top: 4px solid $dark-grey;
+    }
+
+    .skills-header {
+        font-family: $skills-font;
+        text-align: center;
+        font-weight: bolder;
+        font-size: 40px;
+        margin-bottom: 30px;
+    }
+
+    .skills-list {
+        font-family: $skills-font;
+        font-size: 30px;
+        text-align: center;
+        list-style: none;
+    }
+
+    i {
+        color: $off-white;
+    }
+}
