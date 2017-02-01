@@ -7,12 +7,28 @@
     .thumb {
         padding: 0px;
         margin: 0px;
-        color: $pale-blue;
-        :hover {
-            opacity: 0.7;
+        color: $dark-grey;
+        background: $pale-blue;
+        .hovering {
+            opacity: 0.2;
             cursor: pointer;
         }
+        h2 {
+            pointer-events: none;
+            position: absolute;
+            top: 130px;
+            display: none;
+            font-family: $skills-font;
+            font-weight: bolder;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        .project-img {
+            position: relative;
+        }
+
     }
+
     .section-header {
         color: $pale-blue;
         text-align: center;
