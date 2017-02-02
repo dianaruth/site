@@ -40,3 +40,9 @@
         }
     }
 }
+
+@media (max-width: 600px) {
+    #navbar-projects {
+        display: none;
+    }
+}
